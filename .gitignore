@@ -1,0 +1,20 @@
+# VPN yapılandırmaları özel anahtar içerir; GitHub'a gitmemeli.
+*.ovpn
+!*.example.ovpn
+*.key
+*.pem
+*.crt
+*.p12
+
+# Derlenmiş dosyalar anahtarı içine gömer (exe: my.ovpn, apk: assets/vpn.ovpn)
+*.exe
+*.apk
+*.aab
+build/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

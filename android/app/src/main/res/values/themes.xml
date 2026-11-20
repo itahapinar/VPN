@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Açılışta beyaz ekran yanıp sönmesin diye pencere zemini uygulama zemini ile aynı -->
+    <style name="Theme.Vpn" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg_bottom</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

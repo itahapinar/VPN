@@ -1,0 +1,13 @@
+.gradle/
+build/
+.cxx/
+.idea/
+.kotlin/
+local.properties
+*.iml
+captures/
+# Derlenmiş APK'lar VPN anahtarını içerir
+*.apk
+*.aab
+# ics-openvpn kaynağı (170 MB) — yeniden indirmek için BENİOKU.txt'ye bakın
+ics-openvpn/

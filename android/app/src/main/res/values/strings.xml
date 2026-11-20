@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPN</string>
+
+    <string name="widget_description">VPN\'i ana ekrandan tek dokunuşla bağlayın ya da kesin</string>
+    <string name="widget_off">Bağlı değil</string>
+    <string name="widget_connecting">Bağlanıyor…</string>
+    <string name="widget_disconnecting">Kesiliyor…</string>
+    <string name="widget_on">Korunuyor</string>
+    <string name="widget_connect">Bağlan</string>
+    <string name="widget_disconnect">Bağlantıyı kes</string>
+    <string name="widget_paused">Duraklatıldı</string>
+    <string name="widget_resume">Devam et</string>
+
+    <string name="tile_off">Kapalı</string>
+    <string name="tile_connecting">Bağlanıyor…</string>
+    <string name="tile_disconnecting">Kesiliyor…</string>
+    <string name="tile_on">Bağlı</string>
+    <string name="tile_paused">Duraklatıldı</string>
+</resources>

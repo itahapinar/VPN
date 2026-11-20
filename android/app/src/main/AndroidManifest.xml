@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- VpnApp (ICSOpenVPNApplication'dan türer): VPN servisinin durum/hız bilgisini
+         bu sürece aktarır, widget ve kutucuğu günceller -->
+    <application
+        android:name=".VpnApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_vpn"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_vpn_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vpn">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- VPN bildirimine dokununca motor "<paket>.activities.MainActivity"yi açar -->
+        <activity-alias
+            android:name="${applicationId}.activities.MainActivity"
+            android:exported="false"
+            android:targetActivity=".MainActivity" />
+
+        <!-- "Yeniden bağlan" akışı günlük penceresi açmaya çalışırsa ana ekrana yönlendir -->
+        <activity-alias
+            android:name="de.blinkt.openvpn.activities.LogWindow"
+            android:exported="false"
+            android:targetActivity=".MainActivity" />
+
+        <!-- Bildirimdeki "Bağlantıyı kes": motorun onay pencereli DisconnectVPN ekranı
+             kaldırılır, aynı ad doğrudan kesen QuickDisconnectActivity'ye yönlendirilir -->
+        <activity
+            android:name="de.blinkt.openvpn.activities.DisconnectVPN"
+            tools:node="remove" />
+        <activity
+            android:name=".QuickDisconnectActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:taskAffinity=".QuickDisconnect"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity-alias
+            android:name="de.blinkt.openvpn.activities.DisconnectVPN"
+            android:exported="false"
+            android:targetActivity=".QuickDisconnectActivity" />
+
+        <!-- Ana ekran widget'ı -->
+        <receiver
+            android:name=".VpnWidget"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_vpn_info" />
+        </receiver>
+
+        <!-- Bildirim panelindeki hızlı ayarlar kutucuğu -->
+        <service
+            android:name=".VpnTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile_vpn"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+        </service>
+    </application>
+
+</manifest>

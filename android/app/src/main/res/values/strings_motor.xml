@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VPN motorunun (ics-openvpn) bildirimde gösterdiği metinlerin Türkçesi.
+  Aynı adlı kaynaklar uygulamada tanımlanınca kütüphanedekilerin yerine geçer.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <!-- Bildirim başlığı ve düğmeleri -->
+    <string name="notifcation_title">%s</string>
+    <string name="notifcation_title_notconnect">Bağlı değil</string>
+    <string name="cancel_connection">Bağlantıyı kes</string>
+    <string name="pauseVPN">Duraklat</string>
+    <string name="resumevpn">Devam et</string>
+    <string name="reconnect">Yeniden bağlan</string>
+    <string name="statusline_bytecount">↓%2$s %1$s · ↑%4$s %3$s</string>
+
+    <!-- Bağlantı aşamaları -->
+    <string name="vpn_launch_title">VPN\'e bağlanılıyor…</string>
+    <string name="building_configration">Yapılandırma hazırlanıyor…</string>
+    <string name="state_connecting">Bağlanıyor</string>
+    <string name="state_wait">Sunucu yanıtı bekleniyor</string>
+    <string name="state_auth">Kimlik doğrulanıyor</string>
+    <string name="state_get_config">Yapılandırma alınıyor</string>
+    <string name="state_assign_ip">IP adresi atanıyor</string>
+    <string name="state_add_routes">Yönlendirmeler ekleniyor</string>
+    <string name="state_connected">Bağlandı</string>
+    <string name="state_disconnected">Bağlantı kesildi</string>
+    <string name="state_reconnecting">Yeniden bağlanıyor</string>
+    <string name="state_exiting">Kapatılıyor</string>
+    <string name="state_noprocess">Çalışmıyor</string>
+    <string name="state_resolve">Sunucu adresi çözümleniyor</string>
+    <string name="state_tcp_connect">Bağlanıyor (TCP)</string>
+    <string name="state_auth_failed">Kimlik doğrulama başarısız</string>
+    <string name="state_auth_pending">Kimlik doğrulama bekleniyor</string>
+    <string name="state_nonetwork">İnternet bağlantısı bekleniyor</string>
+    <string name="state_userpause">Duraklatıldı</string>
+    <string name="state_screenoff">Ekran kapalıyken duraklatıldı</string>
+    <string name="state_waitconnectretry">Yeni deneme için %ss saniye bekleniyor</string>
+    <string name="permission_requested">VPN bağlantısı için izin gerekiyor</string>
+
+    <!-- Bildirim kanalları (Ayarlar > Bildirimler'de görünür) -->
+    <string name="channel_name_background">Bağlantı istatistikleri</string>
+    <string name="channel_description_background">Kurulu VPN bağlantısının anlık hızı</string>
+    <string name="channel_name_status">Bağlantı durumu</string>
+    <string name="channel_description_status">VPN bağlantısının durum değişiklikleri (bağlanıyor, doğrulanıyor…)</string>
+    <string name="channel_name_userreq">Kullanıcı işlemi gerekiyor</string>
+    <string name="channel_description_userreq">VPN bağlantısı sizden bir işlem bekliyor</string>
+</resources>

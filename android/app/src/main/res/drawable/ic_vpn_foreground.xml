@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kaynak/logo.png'deki kalkan + kilit; 108dp tuvalin ortadaki 66dp güvenli alanına sığar -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Dış kalkan (turkuaz) -->
+    <path
+        android:fillColor="#35E6D6"
+        android:pathData="M54,28 C60,32 68,34 76,34 L76,52 C76,66 66,75 54,80 C42,75 32,66 32,52 L32,34 C40,34 48,32 54,28 Z" />
+    <!-- İç kalkan -->
+    <path
+        android:fillColor="#3D52B8"
+        android:pathData="M54,32.7 C58.9,36 65.5,37.6 72,37.6 L72,52.4 C72,63.9 63.8,71.2 54,75.3 C44.2,71.2 36,63.9 36,52.4 L36,37.6 C42.5,37.6 49.1,36 54,32.7 Z" />
+    <!-- Kilit halkası -->
+    <path
+        android:pathData="M48.6,53 L48.6,48.6 A5.4,5.4 0 0 1 59.4,48.6 L59.4,53"
+        android:strokeWidth="2.8"
+        android:strokeColor="#D2FFF8"
+        android:strokeLineCap="round" />
+    <!-- Kilit gövdesi -->
+    <path
+        android:fillColor="#C4FBF2"
+        android:pathData="M47.5,52 L60.5,52 A2.5,2.5 0 0 1 63,54.5 L63,64 A2.5,2.5 0 0 1 60.5,66.5 L47.5,66.5 A2.5,2.5 0 0 1 45,64 L45,54.5 A2.5,2.5 0 0 1 47.5,52 Z" />
+    <!-- Anahtar deliği -->
+    <path
+        android:fillColor="#2A2F9C"
+        android:pathData="M54,56 A1.9,1.9 0 1 1 53.99,56 Z M53.1,58.4 L54.9,58.4 L55.3,62.6 L52.7,62.6 Z" />
+</vector>
